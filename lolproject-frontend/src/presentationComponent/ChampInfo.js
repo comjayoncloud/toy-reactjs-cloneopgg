@@ -1,12 +1,16 @@
 import React from "react";
 import "./css/champ_info.css";
+import SpellIcon from "./SpellIcon";
+import ChampIcon from "./ChampIcon";
 
 class ChampInfo extends React.Component {
   render() {
-    console.log("ChampInfo");
+    console.log(this.props);
     return (
       <div className="champ_info">
-        <p>{this.props.champ}</p>
+        <ChampIcon champ={this.props.mychamp.champ} />
+        <SpellIcon spellName={this.props.spellName} />
+        <div>{this.props.champ}</div>
       </div>
     );
   }

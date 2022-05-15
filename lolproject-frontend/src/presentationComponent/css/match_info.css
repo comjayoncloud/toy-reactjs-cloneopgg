@@ -1,7 +1,9 @@
 .match_info {
   background-color: skyblue;
-  width: 800px;
-  border: 1px;
-  padding: 60px;
-  margin-top: 20px;
+  display: table;
+  table-layout: fixed;
+  width: 689px;
+  border-collapse: collapse;
+  border: 1px solid #99b9cf;
+  background-color: #a3cfec;
 }

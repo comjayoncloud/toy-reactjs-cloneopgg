@@ -1,0 +1,45 @@
+.my_team {
+  background-color: skyblue;
+  /* display: flex; */
+}
+
+.participants {
+  width: 170px;
+  font-size: 0;
+  display: table-cell;
+  height: 96px;
+  vertical-align: middle;
+}
+
+.myteam-ul {
+  float: left;
+  width: 50%;
+}
+
+.notmyteam-ul {
+  float: right;
+  width: 50%;
+}
+
+.li {
+  display: block;
+  width: 80px;
+  height: 18px;
+  margin-left: 3px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.name {
+  display: inline-block;
+  max-width: 60px;
+  vertical-align: middle;
+  font-size: 11px;
+  color: #555;
+}
