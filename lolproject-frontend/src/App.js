@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MatchInfo,
   ChampInfo,
@@ -13,50 +13,55 @@ import "./app.css";
 const App = () => {
   // 함수형 컴포넌트 : function 으로 정의하고 return 문에 jsx 코드를 반환
 
+  // get data
   const [data, setData] = useState(null);
-
-  //async-await 안쓴거
   useEffect(() => {
     async function fetchData() {
       const data = await axios.get("/api/allinfo");
-      // const data = await axios.get("https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/%EB%B9%B5%EB%92%A4%EB%A5%BC%ED%9D%94%EB%93%9C%EB%A1%9D%EB%B0%94?api_key=RGAPI-fa9e7109-0043-49f2-9c6d-9e3b8eb820db");
-      console.log(data);
       setData(data.data);
     }
     fetchData();
   }, []);
-  console.log(data);
+  // console.log(typeof data); // object
 
   const tmp = {
-    // gameType: "무작위총력전",
     gameResult: "승/패",
-    // champName: "제라스",
-    // gameStat: "9킬 7데스 10어시",
-    // myTeam: [
-    //   { champ: "Xerath", name: "빵뒤를흔드록바" },
-    //   { champ: "Pyke", name: "트롤5남매넷째" },
-    //   { champ: "Jinx", name: "홍교수님" },
-    //   { champ: "Jhin", name: "바텀권위자조돔황" },
-    //   { champ: "Ziggs", name: "블랙야쿠" },
-    // ],
-
-    // notmyTeam: [
-    //   { champ: "Amumu", name: "VENOMIAC" },
-    //   { champ: "Karma", name: "Arcra" },
-    //   { champ: "Zed", name: "호랑이쮸쮸" },
-    //   { champ: "Kaisa", name: "재미동동이" },
-    //   { champ: "Sylas", name: "코 랴" },
-    // ],
     spellName: [
       { spellName: "SummonerFlash" },
       { spellName: "SummonerSnowball" },
     ],
   };
+  // console.log(typeof tmp); // object
 
+  console.log(data);
+
+  // draw action
   return (
     <div>
       <ul className="all_list">
-        <li className="one_list">
+        {data &&
+          data.map((data, index) => (
+            <li className="one_list">
+              {
+                <MatchInfo>
+                  <GameType type={data.gameType} />
+                  <GameResult result={tmp.gameResult} />
+                  <ChampInfo
+                    champ={data.champName}
+                    spellName={tmp.spellName}
+                    mychamp={data.myTeam[0]}
+                  ></ChampInfo>
+                  <GameStat stat={data.gameStat} />
+                  <Participants
+                    myTeam={data.myTeam}
+                    notmyTeam={data.notmyTeam}
+                  />
+                </MatchInfo>
+              }
+            </li>
+          ))}
+
+        {/* <li className="one_list">
           {data && (
             <MatchInfo>
               <GameType type={data[0].gameType} />
@@ -73,7 +78,7 @@ const App = () => {
               />
             </MatchInfo>
           )}
-        </li>
+        </li> */}
       </ul>
     </div>
   );

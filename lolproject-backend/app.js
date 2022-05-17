@@ -16,9 +16,21 @@ app.get("/api/allinfo", async (req, res) => {
   const matchIdList = await getMatchId(
     "r8N_A7VuWeYuN47DEt-R7cSj4OhNMixvqUtxUbpVKXu16fqHlf839AYHiull9_peace0C4eouLo8Yg/ids?start=0&count=20" //puuid
   );
-  const match = await getMatch("KR_5916884753");
-  console.log(match);
-  res.json(match);
+  // console.log(matchIdList);
+  const matchList = [];
+
+  for (const matchId of matchIdList) {
+    try {
+      console.log(matchId);
+      matchList.push(await getMatch(matchId));
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  console.log(matchList);
+
+  res.json(matchList);
 });
 
 app.listen(port, () => {
@@ -32,7 +44,7 @@ getSummoner = async (name) => {
     `https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}`,
     {
       headers: {
-        "X-Riot-Token": "api token",
+        "X-Riot-Token": "RGAPI-2ccbd199-5d94-463d-b60d-925a932025d4",
       },
     }
   );
@@ -45,7 +57,7 @@ getMatchId = async (puuid) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}`,
     {
       headers: {
-        "X-Riot-Token": "api token",
+        "X-Riot-Token": "RGAPI-2ccbd199-5d94-463d-b60d-925a932025d4",
       },
     }
   );
@@ -58,64 +70,62 @@ getMatch = async (s) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/${s}`,
     {
       headers: {
-        "X-Riot-Token": "api token",
+        "X-Riot-Token": "RGAPI-2ccbd199-5d94-463d-b60d-925a932025d4",
       },
     }
   );
-  let allInfo = [
-    {
-      gameType: matchInfo.data.info.gameMode,
-      gameResult: matchInfo.data.info.participants[9].win,
-      champName: matchInfo.data.info.participants[9].championName,
-      gameStat: `${matchInfo.data.info.participants[9].kills}/${matchInfo.data.info.participants[9].deaths}/${matchInfo.data.info.participants[9].assists}`,
-      myTeam: [
-        {
-          champ: matchInfo.data.info.participants[9].championName,
-          name: matchInfo.data.info.participants[9].summonerName,
-        },
-        {
-          champ: matchInfo.data.info.participants[8].championName,
-          name: matchInfo.data.info.participants[8].summonerName,
-        },
-        {
-          champ: matchInfo.data.info.participants[7].championName,
-          name: matchInfo.data.info.participants[7].summonerName,
-        },
-        {
-          champ: matchInfo.data.info.participants[6].championName,
-          name: matchInfo.data.info.participants[6].summonerName,
-        },
-        {
-          champ: matchInfo.data.info.participants[5].championName,
-          name: matchInfo.data.info.participants[5].summonerName,
-        },
-      ],
-      notmyTeam: [
-        {
-          champ: matchInfo.data.info.participants[0].championName,
-          name: matchInfo.data.info.participants[0].summonerName,
-        },
-        {
-          champ: matchInfo.data.info.participants[1].championName,
-          name: matchInfo.data.info.participants[1].summonerName,
-        },
-        {
-          champ: matchInfo.data.info.participants[2].championName,
-          name: matchInfo.data.info.participants[2].summonerName,
-        },
-        {
-          champ: matchInfo.data.info.participants[3].championName,
-          name: matchInfo.data.info.participants[3].summonerName,
-        },
-        {
-          champ: matchInfo.data.info.participants[4].championName,
-          name: matchInfo.data.info.participants[4].summonerName,
-        },
-      ],
-    },
-  ];
+  let allInfo = {
+    gameType: matchInfo.data.info.gameMode,
+    gameResult: matchInfo.data.info.participants[9].win,
+    champName: matchInfo.data.info.participants[9].championName,
+    gameStat: `${matchInfo.data.info.participants[9].kills}/${matchInfo.data.info.participants[9].deaths}/${matchInfo.data.info.participants[9].assists}`,
+    myTeam: [
+      {
+        champ: matchInfo.data.info.participants[9].championName,
+        name: matchInfo.data.info.participants[9].summonerName,
+      },
+      {
+        champ: matchInfo.data.info.participants[8].championName,
+        name: matchInfo.data.info.participants[8].summonerName,
+      },
+      {
+        champ: matchInfo.data.info.participants[7].championName,
+        name: matchInfo.data.info.participants[7].summonerName,
+      },
+      {
+        champ: matchInfo.data.info.participants[6].championName,
+        name: matchInfo.data.info.participants[6].summonerName,
+      },
+      {
+        champ: matchInfo.data.info.participants[5].championName,
+        name: matchInfo.data.info.participants[5].summonerName,
+      },
+    ],
+    notmyTeam: [
+      {
+        champ: matchInfo.data.info.participants[0].championName,
+        name: matchInfo.data.info.participants[0].summonerName,
+      },
+      {
+        champ: matchInfo.data.info.participants[1].championName,
+        name: matchInfo.data.info.participants[1].summonerName,
+      },
+      {
+        champ: matchInfo.data.info.participants[2].championName,
+        name: matchInfo.data.info.participants[2].summonerName,
+      },
+      {
+        champ: matchInfo.data.info.participants[3].championName,
+        name: matchInfo.data.info.participants[3].summonerName,
+      },
+      {
+        champ: matchInfo.data.info.participants[4].championName,
+        name: matchInfo.data.info.participants[4].summonerName,
+      },
+    ],
+  };
   // console.log(allInfo);
-  console.log(typeof allInfo);
+  // console.log(typeof allInfo);
   return allInfo;
 };
 
