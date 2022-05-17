@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 8080;
 const request = require("request");
 const axios = require("axios");
 const { get } = require("request");
@@ -13,10 +13,11 @@ app.get("/api/allinfo", async (req, res) => {
   const summoner = await getSummoner(
     "%EB%B9%B5%EB%92%A4%EB%A5%BC%ED%9D%94%EB%93%9C%EB%A1%9D%EB%B0%94" // name
   );
+  console.log(summoner);
   const matchIdList = await getMatchId(
     "r8N_A7VuWeYuN47DEt-R7cSj4OhNMixvqUtxUbpVKXu16fqHlf839AYHiull9_peace0C4eouLo8Yg/ids?start=0&count=20" //puuid
   );
-  // console.log(matchIdList);
+  console.log(matchIdList);
   const matchList = [];
 
   for (const matchId of matchIdList) {
@@ -40,14 +41,14 @@ app.listen(port, () => {
 getSummoner = async (name) => {
   // api - axios ver
 
-  const summoner = await axios.get(
-    `https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}`,
-    {
-      headers: {
-        "X-Riot-Token": "RGAPI-2ccbd199-5d94-463d-b60d-925a932025d4",
-      },
-    }
-  );
+  const url = `https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}`;
+  // console.log
+
+  const summoner = await axios.get(url, {
+    headers: {
+      "X-Riot-Token": "RGAPI-5f364dee-2384-4465-bee1-64a0ea468c01",
+    },
+  });
   // console.log(summoner.data);
   return summoner.data;
 };
@@ -57,7 +58,7 @@ getMatchId = async (puuid) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-2ccbd199-5d94-463d-b60d-925a932025d4",
+        "X-Riot-Token": "RGAPI-5f364dee-2384-4465-bee1-64a0ea468c01",
       },
     }
   );
@@ -70,7 +71,7 @@ getMatch = async (s) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/${s}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-2ccbd199-5d94-463d-b60d-925a932025d4",
+        "X-Riot-Token": "RGAPI-5f364dee-2384-4465-bee1-64a0ea468c01",
       },
     }
   );
