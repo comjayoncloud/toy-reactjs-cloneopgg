@@ -6,7 +6,8 @@ const axios = require("axios");
 const { get } = require("request");
 const cors = require("cors");
 
-https: app.use(express.json());
+app.use(cors());
+app.use(express.json());
 
 app.get("/api/allinfo", async (req, res) => {
   console.log("connected");
@@ -129,5 +130,3 @@ getMatch = async (s) => {
   // console.log(typeof allInfo);
   return allInfo;
 };
-
-app.use(cors());
