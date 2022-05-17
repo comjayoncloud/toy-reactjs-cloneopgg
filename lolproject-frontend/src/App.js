@@ -17,7 +17,7 @@ const App = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      const data = await axios.get("/api/allinfo");
+      const data = await axios.get("http://13.57.243.145:8080/api/allinfo");
       setData(data.data);
     }
     fetchData();
