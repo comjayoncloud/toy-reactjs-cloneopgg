@@ -1,8 +1,20 @@
-.game_type {
+.game {
+  width: 108px;
+  margin-left: 15px;
   background-color: skyblue;
-  width: 70px;
-  text-align: center;
-  font-size: 11px;
-  color: #555;
+  color: var(--gray500);
   line-height: 16px;
+}
+
+.game_type {
+  margin-top: 25px;
+  margin-left: 15px;
+  background-color: skyblue;
+  font-weight: bold;
+  color: var(--red600);
+}
+
+.game_result {
+  margin-top: 15px;
+  margin-left: 15px;
 }

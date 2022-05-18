@@ -1,9 +1,17 @@
 .match_info {
-  background-color: skyblue;
-  display: table;
+  background-color: #87ceeb;
+  display: flex;
   table-layout: fixed;
   width: 689px;
   border-collapse: collapse;
   border: 1px solid #99b9cf;
-  background-color: #a3cfec;
+}
+
+.body {
+  display: inline-block;
+  width: 740px;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-size: 12px;
+  vertical-align: top;
 }

@@ -5,7 +5,7 @@ class GameStat extends React.Component {
   render() {
     return (
       <div className="game_stat">
-        <span className="kda">{this.props.stat}</span>
+        <div className="kda">{this.props.stat}</div>
       </div>
     );
   }

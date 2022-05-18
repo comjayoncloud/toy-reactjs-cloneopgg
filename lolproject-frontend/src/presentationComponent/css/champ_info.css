@@ -15,6 +15,7 @@
 }
 
 .champ_info > .icon {
+  margin-top: 15px;
   display: inline-block;
   width: 46px;
   height: 46px;
@@ -33,6 +34,7 @@
 }
 
 .spells {
+  margin-top: 15px;
   display: inline-block;
   vertical-align: middle;
   margin-left: 4px;
