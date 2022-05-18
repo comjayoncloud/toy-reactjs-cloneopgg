@@ -1,5 +1,5 @@
 .game_stat {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   width: 50px;
 
   font-size: 11px;
@@ -11,7 +11,7 @@
 }
 
 .kda {
-  color: #879292;
+  color: #090e0e;
   position: absolute;
   width: 33px;
   height: 33px;

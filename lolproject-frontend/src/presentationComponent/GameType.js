@@ -3,7 +3,7 @@ import "./css/game_type.css";
 
 class GameType extends React.Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div className="game">
         <div className="game_type">{this.props.type}</div>

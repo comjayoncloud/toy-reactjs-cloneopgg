@@ -23,7 +23,6 @@ const App = () => {
   }, []);
 
   const tmp = {
-    gameResult: "승/패",
     spellName: [
       { spellName: "SummonerFlash" },
       { spellName: "SummonerSnowball" },
@@ -38,12 +37,11 @@ const App = () => {
           data.map((data, index) => (
             <li className="one_list">
               {
-                <MatchInfo>
+                <MatchInfo winNlose={data.gameResult}>
                   <GameType
                     type={data.gameType}
                     result={data.gameResult}
                   ></GameType>
-                  {/* <GameResult result={tmp.gameResult} /> */}
                   <ChampInfo
                     champ={data.champName}
                     spellName={tmp.spellName}

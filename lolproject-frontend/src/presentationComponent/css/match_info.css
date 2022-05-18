@@ -1,5 +1,14 @@
-.match_info {
+.match_info_win {
   background-color: #87ceeb;
+  display: flex;
+  table-layout: fixed;
+  width: 689px;
+  border-collapse: collapse;
+  border: 1px solid #99b9cf;
+}
+
+.match_info_lose {
+  background-color: rgb(187, 144, 144);
   display: flex;
   table-layout: fixed;
   width: 689px;

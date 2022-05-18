@@ -1,5 +1,5 @@
 .participants {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,7 +10,7 @@
 }
 
 .my_team {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   /* display: flex; */
 }
 
@@ -21,14 +21,14 @@
 }
 
 .myteam-ul {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   margin-top: 3px;
   float: left;
   width: 50%;
 }
 
 .notmyteam-ul {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   margin-top: 3px;
 
   float: left;
@@ -36,7 +36,7 @@
 }
 
 .li {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   display: block;
   width: 80px;
   height: 18px;
@@ -47,7 +47,7 @@
 }
 
 .icon {
-  background-color: skyblue;
+  /* background-color: skyblue; */
 
   display: inline-block;
   vertical-align: middle;
@@ -55,7 +55,7 @@
 }
 
 .name {
-  background-color: skyblue;
+  /* background-color: skyblue; */
 
   display: inline-block;
   max-width: 60px;
