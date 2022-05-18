@@ -47,7 +47,7 @@ getSummoner = async (name) => {
 
   const summoner = await axios.get(url, {
     headers: {
-      "X-Riot-Token": "RGAPI-5f364dee-2384-4465-bee1-64a0ea468c01",
+      "X-Riot-Token": "RGAPI-a82c53b8-c014-4606-8f53-b9b84bde23c9",
     },
   });
   // console.log(summoner.data);
@@ -59,7 +59,7 @@ getMatchId = async (puuid) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-5f364dee-2384-4465-bee1-64a0ea468c01",
+        "X-Riot-Token": "RGAPI-a82c53b8-c014-4606-8f53-b9b84bde23c9",
       },
     }
   );
@@ -72,10 +72,15 @@ getMatch = async (s) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/${s}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-5f364dee-2384-4465-bee1-64a0ea468c01",
+        "X-Riot-Token": "RGAPI-a82c53b8-c014-4606-8f53-b9b84bde23c9",
       },
     }
   );
+
+  if (matchInfo.data.info.gameMode == "ARAM") {
+    matchInfo.data.info.gameMode = "무작위총력전";
+  }
+
   let allInfo = {
     gameType: matchInfo.data.info.gameMode,
     gameResult: matchInfo.data.info.participants[9].win,
@@ -126,7 +131,7 @@ getMatch = async (s) => {
       },
     ],
   };
-  // console.log(allInfo);
+  console.log(allInfo);
   // console.log(typeof allInfo);
   return allInfo;
 };
