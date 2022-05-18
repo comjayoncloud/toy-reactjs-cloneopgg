@@ -41,7 +41,7 @@ const App = () => {
                 <MatchInfo>
                   <GameType
                     type={data.gameType}
-                    result={tmp.gameResult}
+                    result={data.gameResult}
                   ></GameType>
                   {/* <GameResult result={tmp.gameResult} /> */}
                   <ChampInfo
