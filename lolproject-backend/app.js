@@ -80,6 +80,9 @@ getMatch = async (s) => {
   if (matchInfo.data.info.gameMode == "ARAM") {
     matchInfo.data.info.gameMode = "무작위총력전";
   }
+  if (matchInfo.data.info.participants[9].win == "false") {
+    matchInfo.data.info.participants[9].win = "패";
+  } else matchInfo.data.info.participants[9].win = "승";
 
   let allInfo = {
     gameType: matchInfo.data.info.gameMode,
