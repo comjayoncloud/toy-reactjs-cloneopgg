@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/match_info.css";
+import "./css/MatchInfo.css";
 
 class MatchInfo extends React.Component {
   render() {

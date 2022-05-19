@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/champ_info.css";
+import "./css/ChampIcon.css";
 
 class SpellIcon extends React.Component {
   render() {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/game_stat.css";
+import "./css/GameStat.css";
 
 class GameStat extends React.Component {
   render() {

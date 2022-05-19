@@ -1,5 +1,5 @@
 .match_info_win {
-  background-color: #87ceeb;
+  background-color: #88b7d6;
   display: flex;
   table-layout: fixed;
   width: 689px;
@@ -8,12 +8,13 @@
 }
 
 .match_info_lose {
-  background-color: rgb(187, 144, 144);
   display: flex;
   table-layout: fixed;
   width: 689px;
   border-collapse: collapse;
   border: 1px solid #99b9cf;
+  border-color: rgb(225, 174, 174);
+  background-color: rgb(225, 174, 174);
 }
 
 .body {
