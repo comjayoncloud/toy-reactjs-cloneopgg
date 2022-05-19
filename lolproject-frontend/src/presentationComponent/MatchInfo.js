@@ -3,7 +3,6 @@ import "./css/MatchInfo.css";
 
 class MatchInfo extends React.Component {
   render() {
-    console.log(this.props);
     if (this.props.winNlose == "승") {
       return (
         <div className="body">
