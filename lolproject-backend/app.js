@@ -47,7 +47,7 @@ getSummoner = async (name) => {
 
   const summoner = await axios.get(url, {
     headers: {
-      "X-Riot-Token": "RGAPI-a82c53b8-c014-4606-8f53-b9b84bde23c9",
+      "X-Riot-Token": "RGAPI-864d61be-5d5e-41e1-a1b4-497631285277",
     },
   });
   // console.log(summoner.data);
@@ -59,7 +59,7 @@ getMatchId = async (puuid) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-a82c53b8-c014-4606-8f53-b9b84bde23c9",
+        "X-Riot-Token": "RGAPI-864d61be-5d5e-41e1-a1b4-497631285277",
       },
     }
   );
@@ -72,7 +72,7 @@ getMatch = async (s) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/${s}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-a82c53b8-c014-4606-8f53-b9b84bde23c9",
+        "X-Riot-Token": "RGAPI-864d61be-5d5e-41e1-a1b4-497631285277",
       },
     }
   );
