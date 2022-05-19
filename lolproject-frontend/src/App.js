@@ -21,6 +21,7 @@ const App = () => {
     }
     fetchData();
   }, []);
+  console.log(data);
 
   const tmp = {
     spellName: [
@@ -43,9 +44,8 @@ const App = () => {
                     result={data.gameResult}
                   ></GameType>
                   <ChampInfo
-                    champ={data.champName}
                     spellName={tmp.spellName}
-                    mychamp={data.myTeam[0]}
+                    mychamp={data.champName}
                   ></ChampInfo>
                   <GameStat stat={data.gameStat} />
                   <Participants

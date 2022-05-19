@@ -7,9 +7,9 @@ class ChampInfo extends React.Component {
   render() {
     return (
       <div className="champ_info">
-        <ChampIcon champ={this.props.mychamp.champ} />
+        <ChampIcon champ={this.props.mychamp} />
         <SpellIcon spellName={this.props.spellName} />
-        <div>{this.props.champ}</div>
+        <div>{this.props.mychamp}</div>
       </div>
     );
   }
