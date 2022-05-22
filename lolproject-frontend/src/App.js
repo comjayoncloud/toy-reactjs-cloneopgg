@@ -18,13 +18,13 @@ const App = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      const data = await axios.get(
-        `http://13.57.243.145:8080/api/allinfo?id=${id}`
-      );
+      const url = `http://13.57.243.145:8080/api/allinfo?id=${id}`;
+      console.log(url);
+      const data = await axios.get(url);
       setData(data.data);
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   const tmp = {
     spellName: [
