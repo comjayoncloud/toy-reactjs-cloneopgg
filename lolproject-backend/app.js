@@ -41,9 +41,9 @@ getSummoner = async (name) => {
   // api - axios ver
 
   const url = `https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}`;
-
+  const encoded = encodeURI(url);
   // puuid 가져오기
-  const summoner = await axios.get(url, {
+  const summoner = await axios.get(encoded, {
     headers: {
       "X-Riot-Token": "RGAPI-c9994c74-a336-452a-b2df-922f1b22fc7c",
     },
