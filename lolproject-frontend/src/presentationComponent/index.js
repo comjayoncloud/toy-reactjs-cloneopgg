@@ -5,6 +5,7 @@ import GameStat from "./GameStat";
 import GameType from "./GameType";
 import Participants from "./Participants";
 import SpellIcon from "./SpellIcon";
+import Input from "./Input";
 
 export {
   MatchInfo,
@@ -14,4 +15,5 @@ export {
   GameType,
   Participants,
   SpellIcon,
+  Input,
 };

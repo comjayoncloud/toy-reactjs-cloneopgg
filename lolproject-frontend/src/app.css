@@ -1,3 +1,21 @@
+.main {
+  display: inline-block;
+  width: 740px;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.input {
+  display: inline-block;
+  width: 740px;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-size: 12px;
+  vertical-align: top;
+}
+
 .all_list {
   display: block;
   list-style-type: disc;
