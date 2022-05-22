@@ -11,7 +11,10 @@ app.use(express.json());
 
 app.get("/api/allinfo", async (req, res) => {
   console.log("connected");
-  // puuid 받아오기
+
+  const id = req.query.id;
+  console.log(id);
+
   const summoner = await getSummoner(
     "%EB%B9%B5%EB%92%A4%EB%A5%BC%ED%9D%94%EB%93%9C%EB%A1%9D%EB%B0%94" // name
   );
