@@ -6,8 +6,8 @@
 3. 프로젝트 아키텍처
     - 개발 툴 : Visual Stuido
     - 프론트엔드 : React
-    - 백엔드 : express.js (node.js) ⇒ npm ver :  8.5.0 , axios
-    - 매니지먼트 툴 : Slack / Notion
+    - 백엔드 : express.js (node.js) 
+    - 매니지먼트 툴 : Notion
     - 배포 : Git / Aws
     - 코드내용 : GIt → https://github.com/comjayoncloud/LOL_Project, https://github.com/comjayoncloud/Public_Study
 4. 사용방법
