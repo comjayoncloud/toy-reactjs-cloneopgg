@@ -9,7 +9,7 @@
     - 백엔드 : express.js (node.js) 
     - 매니지먼트 툴 : Notion
     - 배포 : Git / Aws
-    - 코드내용 : GIt → https://github.com/comjayoncloud/LOL_Project, https://github.com/comjayoncloud/Public_Study
+    - 코드내용 : GIt → https://github.com/comjayoncloud/LOL_Project
 4. 사용방법
     - http://13.57.243.145:3000/ 접속
     - 빈칸에 아이디를 입력하고 submit 클릭
