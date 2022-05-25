@@ -11,4 +11,6 @@
     - 배포 : Git / Aws
     - 코드내용 : GIt → https://github.com/comjayoncloud/LOL_Project, https://github.com/comjayoncloud/Public_Study
 4. 사용방법
-    -  
+    - http://13.57.243.145:3000/ 접속
+    - 빈칸에 아이디를 입력하고 submit 클릭
+    - 예시) 빵뒤를흔드록바 , 을지로서포터
