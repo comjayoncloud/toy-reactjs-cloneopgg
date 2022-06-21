@@ -71,7 +71,7 @@ getMatch = async (s, summoner) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/${s}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-2bc0c846-cc4f-4168-8112-fbef0f6e307c",
+        "X-Riot-Token": "",
       },
     }
   );
