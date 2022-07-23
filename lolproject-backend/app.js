@@ -9,6 +9,8 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
+const api_token = "RGAPI-eb2c41d8-6ca9-448d-a14b-43b207e6ac32";
+
 app.get("/api/allinfo", async (req, res) => {
   console.log("connected");
 
@@ -45,7 +47,7 @@ getSummoner = async (name) => {
   // puuid 가져오기
   const summoner = await axios.get(encoded, {
     headers: {
-      "X-Riot-Token": "RGAPI-539d1443-182a-4f9b-b4a1-6aa0d7fe0e24",
+      "X-Riot-Token": api_token,
     },
   });
   return summoner.data;
@@ -57,7 +59,7 @@ getMatchId = async (puuid) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-539d1443-182a-4f9b-b4a1-6aa0d7fe0e24",
+        "X-Riot-Token": api_token,
       },
     }
   );
@@ -71,7 +73,7 @@ getMatch = async (s, summoner) => {
     `https://asia.api.riotgames.com/lol/match/v5/matches/${s}`,
     {
       headers: {
-        "X-Riot-Token": "RGAPI-539d1443-182a-4f9b-b4a1-6aa0d7fe0e24",
+        "X-Riot-Token": api_token,
       },
     }
   );
