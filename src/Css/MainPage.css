@@ -1,0 +1,20 @@
+.Mainpage {
+  min-width: 1080px;
+  height: 1000px;
+  background-color: #5383e8;
+}
+
+.Img img {
+  display: block;
+  max-height: 224px;
+  margin: 0 auto;
+}
+
+.SearchContainer {
+  display: flex;
+  margin: 0 auto;
+  height: 60px;
+  width: 800px;
+  background-color: white;
+  border-radius: 30px;
+}
