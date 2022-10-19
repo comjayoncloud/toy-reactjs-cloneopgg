@@ -29,6 +29,7 @@ class Header extends React.Component {
                 src="https://s-lol-web.op.gg/images/icon/opgglogo.svg?v=1666077951780"
                 width="65"
                 height="16"
+                alt="op.gg"
               />
             </a>
           </h1>
@@ -37,7 +38,7 @@ class Header extends React.Component {
               <li>
                 <span>
                   <img
-                    src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-lol-white.svg?image=q_auto,f_webp,w_48&amp;v=1666077951780"
+                    src="https://w.namu.la/s/40a1375bd78562d495a1e6af9472dc97f7ef2c982f03c54e034cb0557eee24eeaa5059644d38b6b998705200e8fec1aa5e5ad2381a7f3a21e64d58b0331c9a37588df3c0db5137f756880f50ec81546ae110ab8f127b4305cd085d06b7c9672b"
                     width="24"
                     alt="리그오브레전드"
                     height="24"
@@ -70,9 +71,9 @@ class Header extends React.Component {
             </ul>
           </nav>
         </div>
-        <div className="Game2">
+        {/* <div className="Game2">
           <nav></nav>
-        </div>
+        </div> */}
       </div>
     );
   }
