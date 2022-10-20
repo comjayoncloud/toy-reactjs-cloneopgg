@@ -1,0 +1,85 @@
+.DrawList {
+  background-color: white;
+  width: 689px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.DrawList small {
+  text-align: center;
+  display: block;
+}
+
+.DrawList > li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.Lose {
+  display: flex;
+  width: 670px;
+  height: 96px;
+  margin: 0 auto;
+  background-color: rgb(225, 174, 174);
+}
+
+.Game {
+  width: 108px;
+  margin-left: 25px;
+}
+
+.Game > div {
+  height: 50%;
+  text-align: center;
+}
+
+.ChampInfo {
+  margin-left: 10px;
+  width: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Icon {
+  margin-top: 15px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.Spells {
+  padding-left: 5px;
+  margin-top: 17px;
+}
+
+.ChampName {
+  padding-left: 10px;
+}
+
+.SpellImg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.GameStat {
+  width: 108px;
+  display: flex;
+  align-items: center;
+}
+
+.Kda {
+  margin: 0 auto;
+}
+
+.Participants {
+  flex: 1;
+  display: flex;
+}
+
+.Participants > ul {
+}
+
+.Participants > ul > li {
+  background-color: white;
+}

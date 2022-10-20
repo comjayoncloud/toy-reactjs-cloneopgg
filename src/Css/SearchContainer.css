@@ -1,0 +1,37 @@
+.SearchContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 800px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.SearchForm {
+  display: flex;
+  height: 60px;
+  width: 800px;
+  text-align: left;
+  align-items: center;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.SearchFormRegion {
+  padding-left: 25px;
+  height: 40px;
+  width: 234px;
+}
+
+.SearchFormId {
+  flex: 1;
+}
+
+.SearchFormId input {
+  border: 0;
+}

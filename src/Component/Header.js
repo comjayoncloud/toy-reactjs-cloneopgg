@@ -10,7 +10,7 @@ class Header extends React.Component {
             <img
               src="https://opgg-gnb.akamaized.net/static/images/banners/gnb_ogt@2x.png?image=q_auto,f_webp,w_1940&v=1666077951574"
               width="970"
-              alt
+              alt="광고"
               height="90"
             />
           </a>
@@ -19,6 +19,7 @@ class Header extends React.Component {
               src="https://www.citypng.com/public/uploads/preview/transparent-white-square-close-x-button-icon-31631915367bsrspyjmhz.png"
               width="24"
               height="24"
+              alt="x버튼"
             />
           </button>
         </div>

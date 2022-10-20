@@ -1,6 +1,13 @@
 import React from "react";
 import "../Css/MainPage.css";
+import DrawList from "./DrawList";
+import SearchContainer from "./SearchContainer";
+
 class MainPage extends React.Component {
+  handleCreate = (data) => {
+    console.log(data);
+  };
+
   render() {
     return (
       <div className="Mainpage">
@@ -10,20 +17,8 @@ class MainPage extends React.Component {
             alt="메인페이지 로고"
           />
         </div>
-        <div className="SearchContainer">
-          <form className="SearchForm">
-            <div className="SearchFormRegion">
-              <small className="label">Region</small>
-              <div>Korea</div>
-            </div>
-            <div className="SearchFormId">
-              <label className="label">Search</label>
-
-              <input type="text" placeholder="소환사명, 소환사명, ..." />
-            </div>
-          </form>
-          <button>클릭</button>
-        </div>
+        <SearchContainer onCreate={this.handleCreate} />
+        <DrawList />
       </div>
     );
   }

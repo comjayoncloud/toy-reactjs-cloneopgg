@@ -1,0 +1,65 @@
+import React from "react";
+import "../Css/DrawList.css";
+
+class DrawList extends React.Component {
+  render() {
+    return (
+      <div className="DrawList">
+        <small> 검색결과</small>
+        <li>
+          <div className="Lose">
+            <div className="Game">
+              <div className="GameType">CLASSIC</div>
+              <div className="GameResult">패</div>
+            </div>
+            <div className="ChampInfo">
+              <div>
+                <img
+                  class="Icon"
+                  src="https://ddragon.leagueoflegends.com/cdn/12.9.1/img/champion/Morgana.png"
+                  alt="챔피언아이콘"
+                />
+              </div>
+              <div className="Spells">
+                <img
+                  class="SpellImg"
+                  src="https://ddragon.leagueoflegends.com/cdn/12.9.1/img/spell/SummonerFlash.png"
+                  alt="SummonerFlash"
+                />
+                <img
+                  class="SpellImg"
+                  src="https://ddragon.leagueoflegends.com/cdn/12.9.1/img/spell/SummonerSnowball.png"
+                  alt="SummonerSnowball"
+                />
+              </div>
+              <div className="ChampName">모르가나</div>
+            </div>
+            <div className="GameStat">
+              <div className="Kda">3/5/1</div>
+            </div>
+            <div className="Participants">
+              <ul>
+                <li>아이콘,이름</li>
+                <li>아이콘,이름</li>
+                <li>아이콘,이름</li>
+                <li>아이콘,이름</li>
+                <li>아이콘,이름</li>
+              </ul>
+              <ul>
+                <li>아이콘,이름</li>
+                <li>아이콘,이름</li>
+                <li>아이콘,이름</li>
+                <li>아이콘,이름</li>
+                <li>아이콘,이름</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div className="Lose"></div>
+        </li>
+      </div>
+    );
+  }
+}
+export default DrawList;
