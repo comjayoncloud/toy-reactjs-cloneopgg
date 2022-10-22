@@ -1,5 +1,5 @@
 .DrawList {
-  background-color: white;
+  background-color: azure;
   width: 689px;
   margin: 0 auto;
   margin-top: 10px;
@@ -20,7 +20,19 @@
   width: 670px;
   height: 96px;
   margin: 0 auto;
-  background-color: rgb(225, 174, 174);
+  background-color: #fff1f3;
+  border-left: 6px solid;
+  border-color: #e84057;
+}
+
+.Win {
+  display: flex;
+  width: 670px;
+  height: 96px;
+  margin: 0 auto;
+  background-color: #ecf2ff;
+  border-left: 6px solid;
+  border-color: #5383e8;
 }
 
 .Game {
@@ -28,7 +40,8 @@
   margin-left: 25px;
 }
 
-.Game > div {
+.Game div {
+  padding-top: 5px;
   height: 50%;
   text-align: center;
 }
@@ -62,8 +75,7 @@
   height: 22px;
 }
 
--------------------------------------------------------------------------
-  .GameStat {
+.GameStat {
   width: 108px;
   display: flex;
   align-items: center;
@@ -73,10 +85,10 @@
   margin: 0 auto;
 }
 
--------------------------------------------------------------------------
-  .Participants {
-  flex: 1;
+.Participants {
   display: flex;
+
+  flex: 1;
 }
 
 .Participants ul {

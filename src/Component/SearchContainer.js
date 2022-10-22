@@ -1,19 +1,14 @@
-import React from "react";
+import React, { Componnet } from "react";
 import "../Css/SearchContainer.css";
 class SearchContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-  handleSubmit(event) {
-    console.log(this.state);
-    event.preventDefault();
-  }
+  state = {
+    name: "",
+  };
+  handleChange = (e) => {
+    this.setState({
+      name: e.target.value,
+    });
+  };
   render() {
     return (
       <div className="SearchContainer">
@@ -28,10 +23,11 @@ class SearchContainer extends React.Component {
             <input
               type="text"
               placeholder="소환사명, 소환사명, ..."
-              value={this.state.value}
+              value={this.state.name}
               onChange={this.handleChange}
             />
           </div>
+          <div>{this.state.name}</div>
         </form>
         <button>클릭</button>
       </div>
