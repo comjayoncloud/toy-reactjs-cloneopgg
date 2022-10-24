@@ -1,5 +1,6 @@
 import React, { Componnet } from "react";
 import "../Css/SearchContainer.css";
+import store from "../Redux/store";
 class SearchContainer extends React.Component {
   state = {
     name: "",
@@ -8,6 +9,7 @@ class SearchContainer extends React.Component {
     this.setState({
       name: e.target.value,
     });
+    store.dispatch({ type: "INCREMENT", size: this.state.name });
   };
   render() {
     return (
