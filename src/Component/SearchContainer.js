@@ -1,39 +1,32 @@
-import React, { Componnet } from "react";
+import React from "react";
 import "../Css/SearchContainer.css";
-import store from "../Redux/store";
-class SearchContainer extends React.Component {
-  state = {
-    name: "",
+export default function SearchContainer(props) {
+  const handleChange = (event) => {
+    // props.setId(event.target.value);
+    console.log("암것도아님");
   };
-  handleChange = (e) => {
-    this.setState({
-      name: e.target.value,
-    });
-    store.dispatch({ type: "INCREMENT", size: this.state.name });
+  const handleSubmit = (event) => {
+    props.setId(event.target[0].value);
+    event.preventDefault();
   };
-  render() {
-    return (
-      <div className="SearchContainer">
-        <form className="SearchForm" onSubmit={this.handleSubmit}>
-          <div className="SearchFormRegion">
-            <small className="label">Region</small>
-            <div>Korea</div>
-          </div>
+  return (
+    <div className="SearchContainer">
+      <form className="SearchForm" onSubmit={handleSubmit}>
+        <div className="SearchFormRegion">
+          <small className="label">Region</small>
+          <div>Korea</div>
+        </div>
 
-          <div className="SearchFormId">
-            <label className="label">Search</label>
-            <input
-              type="text"
-              placeholder="소환사명, 소환사명, ..."
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-          </div>
-          <div>{this.state.name}</div>
-        </form>
-        <button>클릭</button>
-      </div>
-    );
-  }
+        <div className="SearchFormId">
+          <label className="label">Search</label>
+          <input
+            type="text"
+            placeholder="소환사명, 소환사명, ..."
+            onChange={handleChange}
+          />
+        </div>
+      </form>
+      <button>클릭</button>
+    </div>
+  );
 }
-export default SearchContainer;
