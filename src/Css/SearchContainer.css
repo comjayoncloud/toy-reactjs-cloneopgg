@@ -35,3 +35,7 @@
 .SearchFormId input {
   border: 0;
 }
+
+input {
+  width: 503px;
+}

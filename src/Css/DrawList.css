@@ -15,7 +15,7 @@
   margin-top: 10px;
 }
 
-.Lose {
+.패 {
   display: flex;
   width: 670px;
   height: 96px;
@@ -25,7 +25,7 @@
   border-color: #e84057;
 }
 
-.Win {
+.승 {
   display: flex;
   width: 670px;
   height: 96px;
@@ -85,7 +85,7 @@
   margin: 0 auto;
 }
 
-.Participants {
+/* .Participants {
   display: flex;
 
   flex: 1;
@@ -113,4 +113,4 @@
   border-radius: 0;
   margin-top: 0;
   padding-top: 2px;
-}
+} */

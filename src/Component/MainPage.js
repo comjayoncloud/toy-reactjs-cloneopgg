@@ -33,7 +33,7 @@ export default function MainPage() {
           alt="메인페이지 로고"
         />
       </div>
-      <SearchContainer setId={setId} />
+      <SearchContainer setId={(id, setId)} />
       {data && <DrawList data={data} />}
     </div>
   );

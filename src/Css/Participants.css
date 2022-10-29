@@ -1,0 +1,32 @@
+.Participants {
+  display: flex;
+
+  flex: 1;
+}
+
+.Participants ul {
+  margin-top: 0;
+  padding-top: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.Participants li {
+  display: flex;
+  height: 18px;
+  width: 88px;
+  align-items: center;
+  padding-top: 1px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Participants img {
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  margin-top: 0;
+  padding-top: 2px;
+}
