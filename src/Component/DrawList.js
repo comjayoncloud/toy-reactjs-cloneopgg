@@ -4,7 +4,7 @@ import Participants from "./Participants";
 
 export default function DrawList(props) {
   const data = props.data;
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="DrawList">
