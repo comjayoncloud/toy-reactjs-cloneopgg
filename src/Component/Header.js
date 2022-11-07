@@ -71,9 +71,6 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      {/* <div className="Game2">
-          <nav></nav>
-        </div> */}
     </div>
   );
 }

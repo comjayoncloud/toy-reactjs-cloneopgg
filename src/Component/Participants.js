@@ -3,12 +3,13 @@ import "../Css/Participants.css";
 export default function Participants(props) {
   const myTeam = props.myTeam;
   const notmyTeam = props.notmyTeam;
+  // console.log("Participants");
 
   return (
     <div className="Participants">
       <ul className="MyTeam">
         {myTeam.map((data, index) => (
-          <li>
+          <li key={index}>
             <div>
               <img
                 className="Icon"
@@ -26,7 +27,7 @@ export default function Participants(props) {
       </ul>
       <ul className="EnemyTeam">
         {notmyTeam.map((data, index) => (
-          <li>
+          <li key={index}>
             <div>
               <img
                 className="Icon"

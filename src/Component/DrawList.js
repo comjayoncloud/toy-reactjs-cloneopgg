@@ -4,7 +4,7 @@ import Participants from "./Participants";
 
 export default function DrawList(props) {
   const data = props.data;
-  // console.log(data);
+  // console.log("DrawList");
 
   return (
     <div className="DrawList">
@@ -21,7 +21,7 @@ export default function DrawList(props) {
               <div className="ChampInfo">
                 <div>
                   <img
-                    class="Icon"
+                    className="Icon"
                     src={
                       "https://ddragon.leagueoflegends.com/cdn/12.9.1/img/champion/" +
                       data.champName +
@@ -32,12 +32,12 @@ export default function DrawList(props) {
                 </div>
                 <div className="Spells">
                   <img
-                    class="SpellImg"
+                    className="SpellImg"
                     src="https://ddragon.leagueoflegends.com/cdn/12.9.1/img/spell/SummonerFlash.png"
                     alt="SummonerFlash"
                   />
                   <img
-                    class="SpellImg"
+                    className="SpellImg"
                     src="https://ddragon.leagueoflegends.com/cdn/12.9.1/img/spell/SummonerSnowball.png"
                     alt="SummonerSnowball"
                   />

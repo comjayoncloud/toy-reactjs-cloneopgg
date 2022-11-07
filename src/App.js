@@ -1,11 +1,8 @@
 import "./App.css";
-import Header from "./Component/Header";
-import Ad from "./Component/Ad";
-import MainPage from "./Component/MainPage";
 import React, { Component } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./Component/Home";
-import SearchResult from "./Component/SearchResult";
+import Home from "./Page/Home";
+import SearchResult from "./Page/SearchResult";
 function App() {
   return (
     <Routes>

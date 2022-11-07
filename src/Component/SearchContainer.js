@@ -3,16 +3,9 @@ import "../Css/SearchContainer.css";
 import { Navigate, useNavigate } from "react-router-dom";
 
 export default function SearchContainer(props) {
-  // const handleChange = (event) => {
-  //   props.setId("null");
-  //   console.log("암것도아님");
-  // };
   const Navigate = useNavigate();
   const handleSubmit = (event) => {
-    // props.setId(event.target[0].value);
-
     Navigate("/jw.gg/searchResult", { state: event.target[0].value });
-    // event.preventDefault();
   };
   return (
     <div className="SearchContainer">
