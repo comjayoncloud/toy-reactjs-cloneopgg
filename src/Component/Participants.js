@@ -1,9 +1,8 @@
 import React from "react";
-import "../Css/Participants.css";
+import "../Css/Participants.scss";
 export default function Participants(props) {
   const myTeam = props.myTeam;
   const notmyTeam = props.notmyTeam;
-  // console.log("Participants");
 
   return (
     <div className="Participants">

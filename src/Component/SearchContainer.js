@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/SearchContainer.css";
+import "../Css/SearchContainer.scss";
 import { Navigate, useNavigate } from "react-router-dom";
 
 export default function SearchContainer(props) {
@@ -9,12 +9,7 @@ export default function SearchContainer(props) {
   };
   return (
     <div className="SearchContainer">
-      <form
-        className="SearchForm"
-        onSubmit={(event) => {
-          Navigate("/jw.gg/searchResult", { state: event.target[0].value });
-        }}
-      >
+      <form className="SearchForm" onSubmit={handleSubmit}>
         <div className="SearchFormRegion">
           <small className="label">Region</small>
           <div>Korea</div>

@@ -1,10 +1,10 @@
 import Header from "../Component/Header";
-import Ad from "../Component/Ad";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 import DrawList from "../Component/DrawList";
 import { useLocation } from "react-router";
+import UserInfo from "../Component/UserInfo";
 
 export default function SearchResult(props) {
   const { state } = useLocation();
@@ -33,7 +33,7 @@ export default function SearchResult(props) {
   return (
     <div className="SearchResult">
       <Header />
-      <Ad />
+      <UserInfo id={id} />
       <DrawList data={data} />
     </div>
   );

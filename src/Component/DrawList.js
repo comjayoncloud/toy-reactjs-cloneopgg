@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/DrawList.css";
+import "../Css/DrawList.scss";
 import Participants from "./Participants";
 
 export default function DrawList(props) {

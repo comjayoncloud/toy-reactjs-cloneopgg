@@ -1,0 +1,31 @@
+.Participants {
+  display: flex;
+  flex: 1;
+
+  ul {
+    margin-top: 0;
+    padding-top: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    li {
+      display: flex;
+      height: 18px;
+      width: 88px;
+      align-items: center;
+      margin-top: 0;
+      padding-top: 1px;
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .Icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 0;
+        margin-top: 0;
+        padding-top: 2px;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/Header.css";
+import "../Css/Header.scss";
 
 export default function Header() {
   return (
@@ -22,14 +22,14 @@ export default function Header() {
           />
         </button>
       </div>
-      <div className="Game1">
+      <div className="GameList">
         <h1>
-          <a href="/">
+          <a href="/jw.gg">
             <img
               src="https://s-lol-web.op.gg/images/icon/opgglogo.svg?v=1666077951780"
               width="65"
               height="16"
-              alt="op.gg"
+              alt="jw.gg"
             />
           </a>
         </h1>
@@ -50,9 +50,7 @@ export default function Header() {
               <a>
                 <img
                   src="https://opgg-gnb.akamaized.net/static/images/icons/01-icon-00-logo-icon-opggsquare.svg?image=q_auto,f_webp,w_48&amp;v=1666077951780"
-                  width="24"
                   alt="데스크톱"
-                  height="24"
                 />
                 <span>데스크톱</span>
               </a>
@@ -61,16 +59,45 @@ export default function Header() {
               <a>
                 <img
                   src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-valorant-white.svg?image=q_auto,f_webp,w_48&amp;v=1666077951780"
-                  width="24"
                   alt="발로란트"
-                  height="24"
                 />
                 <span>발로란트</span>
               </a>
             </li>
+
+            <li>
+              <a>
+                <img
+                  src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-pubg-gray.svg?image=q_auto,f_webp,w_48&v=1667894655810"
+                  alt="배틀그라운드"
+                />
+                <span>배틀그라운드</span>
+              </a>
+            </li>
+
+            <li>
+              <a>
+                <img
+                  src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-overwatch-gray.svg?image=q_auto,f_webp,w_48&v=1667894655810"
+                  alt="오버워치"
+                />
+                <span>오버워치</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <img
+                  src="https://opgg-gnb.akamaized.net/static/images/icons/img_navi_bs.svg?image=q_auto,f_webp,w_48&v=1667894655810"
+                  alt="이터널 리턴"
+                />
+                <span>이터널 리턴</span>
+              </a>
+            </li>
           </ul>
+          {/* <ul>안녕하세요</ul> */}
         </nav>
       </div>
+      <div className=""></div>
     </div>
   );
 }
