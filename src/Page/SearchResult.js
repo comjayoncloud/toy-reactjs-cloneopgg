@@ -16,7 +16,7 @@ export default function SearchResult(props) {
       //id 셋팅
       const settingId = setId(state);
       //url 셋팅
-      const url = `http://www.lolproject-bakcend.com/api/allinfo?id=${id}`;
+      const url = `https://www.lolproject-bakcend.com/api/allinfo?id=${id}`;
 
       //data 요청
       if (id == null) {
