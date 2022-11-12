@@ -13,9 +13,9 @@ export default function Participants(props) {
               <img
                 className="Icon"
                 src={
-                  "https://ddragon.leagueoflegends.com/cdn/12.9.1/img/champion/" +
+                  "https://opgg-static.akamaized.net/meta/images/lol/champion/" +
                   data.champ +
-                  ".png"
+                  ".png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_32&v=1668149208086"
                 }
                 alt="챔프아이콘"
               ></img>
@@ -31,9 +31,9 @@ export default function Participants(props) {
               <img
                 className="Icon"
                 src={
-                  "https://ddragon.leagueoflegends.com/cdn/12.9.1/img/champion/" +
+                  "https://opgg-static.akamaized.net/meta/images/lol/champion/" +
                   data.champ +
-                  ".png"
+                  ".png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_32&v=1668149208086"
                 }
                 alt="챔프아이콘"
               ></img>
