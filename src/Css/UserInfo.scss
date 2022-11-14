@@ -35,7 +35,11 @@
           height: 40px;
           background-color: #5383e8;
           border-radius: 20px;
+          a {
+            color: white;
+          }
         }
+
         .freshButton2 {
           margin-left: 5px;
           display: flex;
@@ -45,6 +49,9 @@
           height: 40px;
           background-color: #7d59ea;
           border-radius: 20px;
+          a {
+            color: white;
+          }
         }
       }
     }
