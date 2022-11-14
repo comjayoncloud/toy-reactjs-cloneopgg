@@ -1,0 +1,61 @@
+.Header {
+  min-width: 1080px;
+}
+
+.TopBannerAd {
+  background-color: rgb(26, 27, 36);
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.GameList {
+  background-color: #28344e;
+  display: flex;
+  height: 40px;
+  h1 {
+    margin-top: 0;
+    height: 40px;
+    width: 98px;
+    background-color: #5383e8;
+  }
+  span {
+    color: white;
+  }
+  a,
+  span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul {
+    margin-top: 0;
+    display: flex;
+    padding-left: 0px;
+  }
+  nav ul li:nth-of-type(1) {
+    background-color: #5383e8;
+    padding: 0 12px 0 0;
+    margin-left: 0px;
+  }
+  nav ul li {
+    padding-left: 15px;
+    height: 40px;
+  }
+}
