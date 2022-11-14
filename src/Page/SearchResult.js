@@ -14,7 +14,8 @@ export default function SearchResult(props) {
   useEffect(() => {
     async function fetchData() {
       //id 셋팅
-      const settingId = setId(state);
+      setId(state);
+
       //url 셋팅
       const url = `https://www.lolproject-bakcend.com/api/allinfo?id=${id}`;
 
