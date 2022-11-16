@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../Css/SearchContainer.scss";
 import { Navigate, useNavigate } from "react-router-dom";
+import Dropdown from "react-bootstrap/Dropdown";
 
 export default function SearchContainer() {
   const [textId, setTextId] = useState("");
@@ -25,7 +26,21 @@ export default function SearchContainer() {
       <form className="SearchForm" onSubmit={handleSubmit}>
         <div className="SearchFormRegion">
           <label>Region</label>
-          <div></div>
+          <div>
+            <Dropdown>
+              <Dropdown.Toggle variant="jaewoo" id="dropdown-basic-button">
+                Korea
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">
+                  <div>North America</div>
+                </Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Europe West</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Korea</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
         </div>
 
         <div className="SearchFormId">

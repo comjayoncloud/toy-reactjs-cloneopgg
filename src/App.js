@@ -3,6 +3,7 @@
 import "./App.css";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Page/Home";
 import SearchResult from "./Page/SearchResult";
 function App() {
