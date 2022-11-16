@@ -13,6 +13,7 @@ export default function SearchResult(props) {
 
   useEffect(() => {
     async function fetchData() {
+      console.log("fetchdata 실행됨");
       //id 셋팅
       setId(state);
 
