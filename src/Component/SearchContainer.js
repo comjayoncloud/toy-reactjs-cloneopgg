@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "../Css/SearchContainer.scss";
 import { Navigate, useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 export default function SearchContainer() {
   const [textId, setTextId] = useState("");
   const Navigate = useNavigate();
+  const [droptext, setDroptext] = useState("korea");
 
   // 클릭,엔터 할때 반응하는 이벤트 리스너 : 페이지 이동 및 id 전달
   const handleSubmit = () => {
@@ -21,26 +23,28 @@ export default function SearchContainer() {
     setTextId(e.target.value);
   };
 
+  const handleSelect = (e) => {
+    console.log("클릭됨");
+    console.log(e);
+    setDroptext(e);
+  };
+
   return (
     <div className="SearchContainer">
       <form className="SearchForm" onSubmit={handleSubmit}>
         <div className="SearchFormRegion">
           <label>Region</label>
-          <div>
-            <Dropdown>
-              <Dropdown.Toggle variant="jaewoo" id="dropdown-basic-button">
-                Korea
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">
-                  <div>North America</div>
-                </Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Europe West</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Korea</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </div>
+          <DropdownButton
+            id="dropdown-basic-button"
+            title={droptext}
+            onSelect={handleSelect}
+          >
+            <Dropdown.Item eventKey="North America">
+              North America
+            </Dropdown.Item>
+            <Dropdown.Item eventKey="Europe West">Europe West</Dropdown.Item>
+            <Dropdown.Item eventKey="Korea">Korea</Dropdown.Item>
+          </DropdownButton>
         </div>
 
         <div className="SearchFormId">
