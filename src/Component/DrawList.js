@@ -79,9 +79,12 @@ export default function DrawList(props) {
                   <ul>
                     {data.summonerItem.map((a, index) =>
                       a === 0 ? (
-                        <li key={index}></li>
+                        <li
+                          key={index}
+                          className={`${data.gameResult}아이템`}
+                        ></li>
                       ) : (
-                        <li key={index}>
+                        <li key={index} className={`${data.gameResult}아이템`}>
                           <div>
                             <img
                               src={

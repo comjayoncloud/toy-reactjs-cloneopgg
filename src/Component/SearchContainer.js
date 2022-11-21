@@ -6,15 +6,17 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 
 export default function SearchContainer() {
   const [textId, setTextId] = useState("");
+  const [droptext, setDroptext] = useState("Korea");
   const Navigate = useNavigate();
-  const [droptext, setDroptext] = useState("korea");
 
   // 클릭,엔터 할때 반응하는 이벤트 리스너 : 페이지 이동 및 id 전달
   const handleSubmit = () => {
     if (textId === "") {
       alert("아이디를 입력하지 않았습니다");
     } else {
-      Navigate("/jw.gg/searchResult", { state: textId });
+      Navigate("/jw.gg/searchResult", {
+        state: { id: textId, region: droptext },
+      });
     }
   };
 
@@ -23,9 +25,8 @@ export default function SearchContainer() {
     setTextId(e.target.value);
   };
 
+  // Dropdown button 이벤트 리스너
   const handleSelect = (e) => {
-    console.log("클릭됨");
-    console.log(e);
     setDroptext(e);
   };
 
@@ -39,10 +40,8 @@ export default function SearchContainer() {
             title={droptext}
             onSelect={handleSelect}
           >
-            <Dropdown.Item eventKey="North America">
-              North America
-            </Dropdown.Item>
-            <Dropdown.Item eventKey="Europe West">Europe West</Dropdown.Item>
+            <Dropdown.Item eventKey="America">North America</Dropdown.Item>
+            <Dropdown.Item eventKey="EuropeWest">Europe West</Dropdown.Item>
             <Dropdown.Item eventKey="Korea">Korea</Dropdown.Item>
           </DropdownButton>
         </div>
