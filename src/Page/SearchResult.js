@@ -1,43 +1,44 @@
-import Header from "../Component/Header";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
-import DrawList from "../Component/DrawList";
-import { useLocation } from "react-router";
+import Header from "../Component/Header";
 import UserInfo from "../Component/UserInfo";
+import DrawList from "../Component/DrawList";
+import "../Css/SearchResult.scss";
+
+import { useLocation } from "react-router";
+import Spinner from "react-bootstrap/Spinner";
 
 export default function SearchResult(props) {
   const { state } = useLocation();
   const [data, setData] = useState(null);
   const [id, setId] = useState(null);
   const [region, setRegion] = useState(null);
-  console.log(region);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function fetchData() {
-      // console.log("fetchdata 실행됨");
       //id 셋팅
       setId(state.id);
-      if (state.region == "Korea") {
+      if (state.region === "Korea") {
         setRegion("kr");
-      } else if (state.region == "America") {
+      } else if (state.region === "America") {
         setRegion("america");
-      } else if (state.region == null) {
+      } else if (state.region === null) {
         console.log("암것도안함");
       }
-      // console.log(region);
 
       //url 셋팅
       const url = `https://www.lolproject-bakcend.com/${region}/api/allinfo?id=${id}`;
-      console.log(url);
+
       //data 요청
       if (id == null) {
         // console.log("id없음~");
       } else {
         const data = await axios.get(url);
         setData(data.data);
-        // console.log(data.data);
+        setLoading(false);
       }
     }
+    console.log(loading);
     fetchData();
   }, [id]);
 
@@ -45,6 +46,14 @@ export default function SearchResult(props) {
     <div className="SearchResult">
       <Header />
       <UserInfo id={id} />
+      {loading === true && (
+        <div className="LoadingPage">
+          <div className="Loading">
+            <Spinner animation="grow" />
+            Loading중..
+          </div>
+        </div>
+      )}
       <DrawList data={data} />
     </div>
   );

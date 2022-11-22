@@ -40,9 +40,27 @@ export default function SearchContainer() {
             title={droptext}
             onSelect={handleSelect}
           >
-            <Dropdown.Item eventKey="America">North America</Dropdown.Item>
-            <Dropdown.Item eventKey="EuropeWest">Europe West</Dropdown.Item>
-            <Dropdown.Item eventKey="Korea">Korea</Dropdown.Item>
+            <Dropdown.Item eventKey="America">
+              <img
+                src="https://s-lol-web.op.gg/assets/images/regions/01-icon-icon-na.svg?v=1668589435097"
+                alt="America"
+              />
+              North America
+            </Dropdown.Item>
+            <Dropdown.Item eventKey="EuropeWest">
+              <img
+                src="https://s-lol-web.op.gg/assets/images/regions/01-icon-icon-euw.svg?v=1668589435097"
+                alt="Europe West"
+              />
+              Europe West
+            </Dropdown.Item>
+            <Dropdown.Item eventKey="Korea">
+              <img
+                src="https://s-lol-web.op.gg/assets/images/regions/01-icon-icon-kr.svg?v=1668589435097"
+                alt="Korea"
+              />
+              Korea
+            </Dropdown.Item>
           </DropdownButton>
         </div>
 
