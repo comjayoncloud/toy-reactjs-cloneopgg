@@ -12,10 +12,6 @@ export default function MainPage() {
         />
       </div>
       <SearchContainer />
-      <div className="Subpage">
-        <div className="Subpage1">op.gg Talk 인기글</div>
-        <div className="Subpage2">QWER.GG</div>
-      </div>
     </div>
   );
 }

@@ -3,16 +3,16 @@
   flex: 1;
 
   ul {
-    width: 88px;
+    width: 100px;
+    height: 96px;
+    padding-left: 0px;
     margin-top: 0px;
     padding-top: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-left: 0px;
     li {
       display: flex;
       height: 18px;
-      width: 80px;
+      width: 90px;
       align-items: center;
       margin-top: 0px;
       font-size: 12px;
@@ -21,11 +21,12 @@
       text-overflow: ellipsis;
 
       img {
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         border-radius: 0;
         margin-top: 0;
-        padding-top: 2px;
+        padding-top: 1px;
+        margin-right: 1px;
       }
     }
   }

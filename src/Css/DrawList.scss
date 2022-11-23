@@ -11,7 +11,7 @@
     list-style: none;
     margin-top: 10px;
   }
-  .패 {
+  .lose {
     display: flex;
     width: 720px;
     height: 96px;
@@ -21,7 +21,7 @@
     border-color: #e84057;
   }
 
-  .승 {
+  .win {
     display: flex;
     width: 720px;
     height: 96px;
@@ -31,7 +31,7 @@
     border-color: #5383e8;
   }
 
-  .Game {
+  .GameInfo {
     width: 108px;
     margin-left: 25px;
     div {
@@ -47,116 +47,5 @@
     margin-top: 0px;
     width: 350px;
     display: block;
-    .ChampInfo {
-      margin-left: 10px;
-      width: 377px;
-      display: flex;
-      flex-wrap: wrap;
-      .Icon {
-        margin-top: 15px;
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-      }
-      .Spells {
-        padding-left: 5px;
-        margin-top: 16px;
-        img {
-          margin-top: 1px;
-          display: block;
-          width: 22px;
-        }
-      }
-      .Runes {
-        .Rune1 {
-          margin-top: 17px;
-        }
-        .Rune2 {
-          margin-top: 1px;
-        }
-        div {
-          margin-left: 1px;
-
-          width: 22px;
-          height: 22px;
-          background-color: black;
-
-          img {
-            display: block;
-            width: 22px;
-          }
-        }
-      }
-      .GameStat {
-        width: 78px;
-        display: block;
-        margin-top: 15px;
-        .KdaStat {
-          font-size: 18px;
-          margin-left: 5px;
-        }
-        .KdaGrade {
-          color: #758592;
-          margin-left: 5px;
-          font-size: 12px;
-        }
-      }
-      .GameStat2 {
-        margin-left: 15px;
-        border-left: 1.5px solid;
-        border-color: #e94c61;
-        .killParticipation {
-          margin-top: 16px;
-          margin-left: 10px;
-          color: #d31a45;
-          font-size: 11px;
-        }
-        .Cs {
-          margin-top: 2px;
-          margin-left: 10px;
-          color: #758592;
-          font-size: 11px;
-        }
-      }
-    }
-    .summonerItems {
-      width: 377px;
-      height: 22px;
-      margin-top: 0px;
-      ul {
-        list-style: none;
-        padding-left: 0px;
-        margin-top: 3px;
-        display: flex;
-        height: 22px;
-        .승아이템 {
-          background-color: #84a4e9;
-          margin-left: 2px;
-          margin-top: 0px;
-          width: 22px;
-          height: 22px;
-          border-radius: 4px;
-        }
-        .패아이템 {
-          background-color: #ffbac3;
-          margin-left: 2px;
-          margin-top: 0px;
-          width: 22px;
-          height: 22px;
-          border-radius: 4px;
-        }
-        li {
-          div {
-            width: 22px;
-            height: 22px;
-          }
-          img {
-            margin-bottom: 10px;
-            border-radius: 4px;
-            width: 22px;
-          }
-        }
-      }
-    }
   }
 }
