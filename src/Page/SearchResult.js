@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Component/Header";
 import UserInfo from "../Component/UserInfo";
 import DrawList from "../Component/DrawList";
-import "../Css/SearchResult.scss";
+import "../Scss/SearchResult.scss";
 
 import { useLocation } from "react-router";
 import Spinner from "react-bootstrap/Spinner";

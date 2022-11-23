@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Css/SearchContainer.scss";
+import "../Scss/SearchContainer.scss";
 import { Navigate, useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";

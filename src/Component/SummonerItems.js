@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/SummonerItems.scss";
+import "../Scss/SummonerItems.scss";
 
 export default function SummonerItems(props) {
   const data = props.data;

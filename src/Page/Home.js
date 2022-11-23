@@ -1,7 +1,7 @@
 import Header from "../Component/Header";
 import MainPage from "../Component/MainPage";
 import SubPage from "../Component/SubPage";
-import "../Css/Home.scss";
+import "../Scss/Home.scss";
 
 export default function Home() {
   return (

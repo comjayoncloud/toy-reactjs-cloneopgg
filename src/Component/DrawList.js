@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/DrawList.scss";
+import "../Scss/DrawList.scss";
 import SummonerInfo from "./SummonerInfo";
 import SummonerItems from "./SummonerItems";
 import Participants from "./Participants";

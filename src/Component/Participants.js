@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/Participants.scss";
+import "../Scss/Participants.scss";
 export default function Participants(props) {
   const myTeam = props.myTeam;
   const notmyTeam = props.notmyTeam;

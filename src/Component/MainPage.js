@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/MainPage.scss";
+import "../Scss/MainPage.scss";
 import SearchContainer from "./SearchContainer";
 
 export default function MainPage() {

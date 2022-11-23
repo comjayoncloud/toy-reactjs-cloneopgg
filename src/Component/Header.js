@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Css/Header.scss";
+import "../Scss/Header.scss";
 
 export default function Header() {
   const [isOpen, setAd] = useState(true);

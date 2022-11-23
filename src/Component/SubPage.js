@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/SubPage.scss";
+import "../Scss/SubPage.scss";
 
 export default function SubPage() {
   return (
