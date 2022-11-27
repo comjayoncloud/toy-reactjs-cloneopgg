@@ -9,7 +9,7 @@ export default function Participants(props) {
       <ul className="MyTeam">
         {myTeam.map((data, index) => (
           <li key={index}>
-            <div>
+            <div className="ChampImg">
               <img
                 className="Icon"
                 src={
@@ -17,17 +17,17 @@ export default function Participants(props) {
                   data.champ +
                   ".png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_32&v=1668149208086"
                 }
-                alt="챔프아이콘"
+                alt="ChampImg"
               ></img>
             </div>
-            <div>{data.name}</div>
+            <div className="ChampId">{data.name}</div>
           </li>
         ))}
       </ul>
       <ul className="EnemyTeam">
         {notmyTeam.map((data, index) => (
           <li key={index}>
-            <div>
+            <div className="ChampImg">
               <img
                 className="Icon"
                 src={
@@ -35,10 +35,10 @@ export default function Participants(props) {
                   data.champ +
                   ".png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_32&v=1668149208086"
                 }
-                alt="챔프아이콘"
+                alt="ChampImg"
               ></img>
             </div>
-            <div>{data.name}</div>
+            <div className="ChampId">{data.name}</div>
           </li>
         ))}
       </ul>

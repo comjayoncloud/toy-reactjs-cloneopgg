@@ -1,12 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+
+import { useLocation } from "react-router";
+import Spinner from "react-bootstrap/Spinner";
+
 import Header from "../Component/Header";
 import UserInfo from "../Component/UserInfo";
 import DrawList from "../Component/DrawList";
 import "../Scss/SearchResult.scss";
-
-import { useLocation } from "react-router";
-import Spinner from "react-bootstrap/Spinner";
 
 export default function SearchResult(props) {
   const { state } = useLocation();
@@ -36,6 +37,8 @@ export default function SearchResult(props) {
         const data = await axios.get(url);
         setData(data.data);
         setLoading(false);
+        console.log(data);
+        console.log(typeof data);
       }
     }
     console.log(loading);

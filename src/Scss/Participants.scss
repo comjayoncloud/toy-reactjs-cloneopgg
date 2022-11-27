@@ -15,10 +15,6 @@
       width: 90px;
       align-items: center;
       margin-top: 0px;
-      font-size: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
 
       img {
         width: 18px;
@@ -27,6 +23,12 @@
         margin-top: 0;
         padding-top: 1px;
         margin-right: 1px;
+      }
+      .ChampId {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
