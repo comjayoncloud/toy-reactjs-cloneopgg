@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-28T08:17:25.447Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="5jVgfITiX6lNXWJ_uaN0" version="20.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-28T09:10:28.082Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="vy--_YiyA3Xpjed-8x6P" version="20.5.3" type="github">
   <diagram id="GJ3IUbv07tYlE3aXCvAi" name="페이지-1">
-    <mxGraphModel dx="1166" dy="641" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1646" dy="905" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -135,6 +135,9 @@
         </mxCell>
         <mxCell id="08gw8rmbph9Txm0sd3IJ-34" value="&lt;b&gt;SummonerItems&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1360" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="08gw8rmbph9Txm0sd3IJ-38" value="&lt;br&gt;&lt;font color=&quot;#1a1a1a&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(26, 26, 26);&quot;&gt;총 세곳에서 상태관리를 하는데 공통적으로 useState를 쓰고 두곳은 useEffect까지 같이쓴다.&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#1a1a1a&quot;&gt;&lt;br&gt;현재 props지옥은&amp;nbsp; 부모-.&amp;gt;자식-&amp;gt;자식 2번 이다.(SearchResult -&amp;gt; DrawList -&amp;gt;Participants,SummonerInfo,SummonerItems).&lt;br&gt;&lt;br&gt;지금은 간단한 프로젝트라 부담스럽지 않지만, 컴포넌트를 더욱더 세분화 하게 된다면 3번,4번,5번 무한대로 증가할 수 있다. 이는 코드가 효율적이지 않을 뿐 더러 알아보기도 쉽지 않고,수정 시 번거롭다. 이 부분을 개선하기 위해 react js 상태관리를 찾아보았다.&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="750" y="969" width="370" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
