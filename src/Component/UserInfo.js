@@ -1,8 +1,7 @@
 import React from "react";
-import "../Css/UserInfo.scss";
+import "../Scss/UserInfo.scss";
 export default function UserInfo(props) {
   let id = props.id;
-  console.log(id);
   return (
     <div className="UserInfo">
       <div className="profile">
