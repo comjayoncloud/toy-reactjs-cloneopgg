@@ -15,6 +15,8 @@ export default function SearchResult(props) {
   const [id, setId] = useState(null);
   const [region, setRegion] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  /** 입력받은 ID값으로 데이터요청 */
   useEffect(() => {
     async function fetchData() {
       //id 셋팅

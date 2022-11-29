@@ -9,7 +9,7 @@ export default function SearchContainer() {
   const [droptext, setDroptext] = useState("Korea");
   const Navigate = useNavigate();
 
-  // 클릭,엔터 할때 반응하는 이벤트 리스너 : 페이지 이동 및 id 전달
+  /**  클릭,엔터 할때 반응하는 이벤트 리스너 : 페이지 이동 및 id 전달*/
   const handleSubmit = () => {
     if (textId === "") {
       alert("아이디를 입력하지 않았습니다");
@@ -20,12 +20,12 @@ export default function SearchContainer() {
     }
   };
 
-  // input 안의 value 상태관리
+  /**  input 안의 value 상태관리*/
   const onChangeText = (e) => {
     setTextId(e.target.value);
   };
 
-  // Dropdown button 이벤트 리스너
+  /**  Dropdown button 이벤트 리스너*/
   const handleSelect = (e) => {
     setDroptext(e);
   };

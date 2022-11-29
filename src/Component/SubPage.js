@@ -3,7 +3,6 @@ import "../Scss/SubPage.scss";
 
 export default function SubPage(props) {
   const data = props.data;
-  // console.log(data);
 
   return (
     <div className="SubPage">
